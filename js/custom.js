@@ -25,4 +25,21 @@
     arrows: false,
     dots: true,
   });
+
+  $(".slick-partners").slick({
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
 })(window.jQuery);
