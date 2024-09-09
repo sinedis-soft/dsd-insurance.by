@@ -902,8 +902,18 @@ button:focus:not(:focus-visible) {
   transition: all 0.5s ease-out;
 }
 
+.product-thumb-wrapper {
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.product-thumb:hover .product-thumb-wrapper {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.9);
+  transition: all 0.5s ease-out;
+}
+
 .product-thumb:hover .product-image {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
 }
 
 .product-top {
