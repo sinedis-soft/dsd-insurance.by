@@ -27,9 +27,11 @@
   });
 
   $(".slick-partners").slick({
-    arrows: false,
     infinite: true,
+    autoplay: true,
     speed: 300,
+    arrows: false,
+    dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [
