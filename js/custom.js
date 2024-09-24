@@ -2,8 +2,8 @@
   "use strict";
 
   // PRE LOADER
-  $(window).load(function () {
-    $(".preloader").delay(500).slideUp("slow"); // set duration in brackets
+  $(window).on("load", function () {
+    $(".preloader").delay(750).fadeOut("slow"); // Плавное исчезновение с задержкой
   });
 
   // NAVBAR
