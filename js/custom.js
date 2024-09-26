@@ -3,7 +3,7 @@
 
   // PRE LOADER
   $(window).on("load", function () {
-    $(".preloader").delay(750).fadeOut("slow"); // Плавное исчезновение с задержкой
+    $(".preloader").delay(750).fadeOut("slow");
   });
 
   // NAVBAR
