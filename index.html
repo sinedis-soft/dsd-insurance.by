@@ -721,6 +721,62 @@
       </div>
     </footer>
 
+    <!-- Cookies -->
+    <style>
+      #cookieAlert {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: white;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 10500;
+      }
+      .cookie-icon {
+        margin-right: 10px;
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 500px) {
+        #cookieAlert {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .cookie-icon {
+          margin-right: 5px;
+        }
+        #cookieAlert button,
+        #cookieAlert a {
+          width: 100%;
+        }
+      }
+    </style>
+    <div id="cookieAlert" class="d-none">
+      <div class="d-flex align-content-between">
+        <span class="cookie-icon">🍪</span>
+        <small class="d-flex justify-content-center align-items-center"
+          >Мы используем куки для улучшения вашего опыта.</small
+        >
+      </div>
+      <button class="btn btn-success mx-3" onclick="acceptCookies()">
+        Принять все
+      </button>
+      <button class="btn btn-dark" onclick="disagreeCookies()">
+        Отклонить все
+      </button>
+      <a
+        href="privacy.html"
+        class="btn btn-secondary mx-3"
+        onclick="openPrivacyPolicy()"
+        >Подробнее</a
+      >
+    </div>
+
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -728,6 +784,7 @@
     <script src="js/jQuery.headroom.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/custom.js"></script>
+    <!-- Chat widget -->
     <script>
       (function (w, d, u) {
         var s = d.createElement("script");
@@ -741,5 +798,24 @@
         "https://cdn.bitrix24.pl/b25731489/crm/site_button/loader_3_dv6lmp.js"
       );
     </script>
+    <!-- Chat widget -->
+    <!-- Cookies -->
+    <script>
+      $(document).ready(function () {
+        if (localStorage.getItem("cookiesAccepted") !== "true") {
+          $("#cookieAlert").removeClass("d-none").hide().fadeIn();
+        }
+      });
+
+      function acceptCookies() {
+        localStorage.setItem("cookiesAccepted", "true");
+        $("#cookieAlert").fadeOut();
+      }
+
+      function disagreeCookies() {
+        $("#cookieAlert").fadeOut();
+      }
+    </script>
+    <!-- Cookies -->
   </body>
 </html>
