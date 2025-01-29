@@ -3,11 +3,11 @@
 -----------------------------------------*/
 :root {
   --white-color: #ffffff;
-  --primary-color: #ff2c16;
-  --section-bg-color: #f0f8ff;
+  --primary-color: #ff3b1f;
+  --section-bg-color: #f5f5f5;
   --dark-color: #000000;
-  --grey-color: #d0d1d1;
-  --p-color: #717275;
+  --grey-color: #707070;
+  --p-color: #333333;
 
   --body-font-family: "Inter", sans-serif;
 
@@ -720,6 +720,11 @@ section {
   padding-bottom: 7rem;
 }
 
+.section-margin {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
 .featured {
   background: var(--section-bg-color);
 }
@@ -1244,6 +1249,11 @@ button:focus:not(:focus-visible) {
     padding-bottom: 4rem;
   }
 
+  .section-margin {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
   .site-header-image.section-padding {
     padding-bottom: 0;
   }
@@ -1292,4 +1302,15 @@ button:focus:not(:focus-visible) {
   .full-image-img {
     bottom: 0;
   }
+}
+
+/* Animation reveal */
+
+section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
