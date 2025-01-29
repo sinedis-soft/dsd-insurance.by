@@ -1002,11 +1002,14 @@ button:focus:not(:focus-visible) {
   SITE FOOTER               
 -----------------------------------------*/
 .site-footer {
-  background: var(--dark-color);
+  background: #333333;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
+.site-footer-logo-link {
+  color: var(--primary-color);
+}
 .footer-menu {
   margin: 0;
   padding: 0;
@@ -1018,7 +1021,7 @@ button:focus:not(:focus-visible) {
 }
 
 .footer-menu-link {
-  color: #6c757d;
+  color: #ffffff;
   font-weight: var(--font-weight-light);
   display: inline-block;
   vertical-align: top;
@@ -1027,12 +1030,13 @@ button:focus:not(:focus-visible) {
 }
 
 .site-footer .social-icon-link {
+  color: #ffffff;
   margin-top: 4px;
 }
 
 .site-footer .social-icon-link:hover,
 .footer-menu-link:hover {
-  color: var(--white-color);
+  color: #ff3b1f;
 }
 
 .copyright-text {
