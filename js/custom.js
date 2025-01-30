@@ -69,3 +69,8 @@ allSection.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
 });
+
+dsdinsur_admin
+
+admin
+DSD2022!admin
